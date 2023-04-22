@@ -24,10 +24,7 @@ FROM fact_sales_order_line__rename_column
 
 , sales_order_line_key__calculated_measure AS (
 SELECT 
-  sales_order_line_key
-  ,product_key
-  ,quantity
-  ,unit_price
+  *
   ,quantity * unit_price AS gross_amount
 FROM fact_sales_order_line__cast_type 
 )
